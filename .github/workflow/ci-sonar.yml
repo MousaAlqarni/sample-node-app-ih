@@ -97,7 +97,7 @@ jobs:
          ZIP_NAME="deployment-package-${SHORT_SHA}-${TS}.zip"
          (cd "$GITHUB_WORKSPACE" && zip -r "$ZIP_NAME" "deployment-package")
          echo "ZIP_NAME=$ZIP_NAME" >> "$GITHUB_ENV"
-
+         
      - name: Upload deployment package artifact
        uses: actions/upload-artifact@v4
        with:
